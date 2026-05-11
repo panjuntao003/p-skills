@@ -28,7 +28,7 @@ Score each candidate 0-3 on:
 - Durability: will this still matter next week?
 - Novelty: does it change what the user should watch?
 
-Keep items scoring 10+ unless the user requested exhaustive coverage. For broad daily briefs, target 5-12 items.
+Keep items scoring 10+ out of 15 unless the user requested exhaustive coverage. For broad daily briefs, target 5-12 items.
 
 ## Builder Signal Section
 

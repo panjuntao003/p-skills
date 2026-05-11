@@ -1,12 +1,11 @@
 ---
 name: p-news
 description: >-
-  Personal AI news intelligence skill that combines AI HOT real-time Chinese AI news with
-  builder-digest style source curation. Use for AI news, AI HOT, AI daily briefings, model/product
-  releases, AI papers, OpenAI/Anthropic/Google updates, builder signals, trend triage, and concise
-  portable Markdown Chinese or bilingual digests. Fetch current information instead of relying on
-  memory, verify important items against primary sources, filter noise, and leave durable process
-  artifacts.
+  Personal AI news intelligence skill. Use this skill whenever the user asks about AI news, recent
+  AI developments, model or product releases, builder signals, or wants a digest of what happened in
+  the AI space — even casual questions like "AI 圈最近有啥" or "what dropped this week in AI".
+  Fetches live data from AI HOT, applies builder-digest curation, and writes a portable Markdown
+  digest to Documents/news/.
 ---
 
 # P News
@@ -25,7 +24,7 @@ Always leave an artifact before the chat summary:
 - Daily or broad brief: `${HOME}/Documents/news/{YYYY-MM-DD}.md`
 - Topic or company watch: `${HOME}/Documents/news/{YYYY-MM-DD}-{topic}.md`
 - The Markdown title must start with the date, for example `# 2026-05-11 P News` or `# 2026-05-11 OpenAI Watch`.
-- Process notes, if the run involved source decisions or failures: append a short `## Process Log` section in the same file.
+- Process notes: append a short `## Process Log` section only when the run involved notable source decisions, failures, or search limitations worth explaining.
 
 The final chat response should summarize only the result and the artifact path.
 
@@ -77,7 +76,18 @@ Do not expose API endpoint paths, raw query params, cursors, rate limits, or oth
    - `## Why It Matters` with concise implications
    - `## Watch Next` with concrete follow-up checks
    - `## Source Index` with source names and URLs
-   - `## Process Log` if useful
+   - `## Process Log` if notable source decisions or failures occurred (see Output Contract)
+
+## Example Triggers
+
+Phrases that should invoke this skill (Chinese or English):
+
+- "AI 圈最近有啥" / "what's happening in AI this week"
+- "帮我出个 AI 日报" / "give me today's AI digest"
+- "OpenAI 最近动态" / "latest from OpenAI"
+- "过去 24 小时大事" / "what dropped in AI in the last 24h"
+- "agent 框架有什么新进展" / "any new agent framework releases"
+- "帮我追踪一下 Gemini 的消息" / "track Gemini news for me"
 
 ## Quality Bar
 

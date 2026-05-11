@@ -1,10 +1,12 @@
 ---
 name: p-invest
 description: >-
-  Personal investment research workflow skill. Use to initialize and maintain a human-readable
-  investment research folder under Documents/Invest, update now.md, research companies, manage
-  environment notes, watchlists, trade logs, holdings checks, monthly reviews, rules, templates,
-  and learning notes. Produces Markdown artifacts and does not provide direct buy or sell advice.
+  Personal investment research workflow skill. Use this skill whenever the user mentions investing,
+  stocks, portfolio, company research, watchlists, trade logging, holdings, monthly reviews, or any
+  personal investment activity — even casual mentions like "I bought some shares" or "is this company
+  worth researching". Initializes and maintains a human-readable Markdown folder under
+  Documents/Invest (also works as an Obsidian vault). Produces research artifacts; does not give
+  direct buy or sell advice.
 ---
 
 # P Invest
@@ -29,22 +31,6 @@ If the user gives another path, use that path. If the folder does not exist, ini
 
 The final chat response should summarize the result and name the updated file path.
 
-## Folder Model
-
-The user and agent should use the same structure:
-
-```text
-0-dashboard/     current view and inbox
-1-environment/   macro, industry, and market context
-2-companies/     company pool, screening, cards, and analysis
-3-decisions/     watchlist, trade log, and decision records
-4-holdings/      current holdings and thesis checks
-5-reviews/       monthly reviews
-6-system/        rules, templates, notes, and audits
-```
-
-Daily users can mostly read `0-dashboard/now.md`. The numbered folders explain the rest of the workflow when the user wants to inspect or take over.
-
 ## Routing
 
 - Initialize or repair the folder structure: read `references/routing.md` and use `assets/vault-template/`.
@@ -57,19 +43,19 @@ Daily users can mostly read `0-dashboard/now.md`. The numbered folders explain t
 1. Do not provide direct buy or sell instructions. Provide checks, scenarios, evidence, and decision records.
 2. Every external fact that enters a formal artifact needs a source, confidence level, and date.
 3. Treat social media and unsourced claims as leads only.
-4. Keep current facts fresh; browse or otherwise verify market, price, legal, regulatory, company, and macro data when the answer depends on recency.
+4. Keep current facts fresh; use WebSearch or WebFetch to verify market, price, legal, regulatory, company, and macro data when the answer depends on recency.
 5. Do not hide the system from the user. Files should be readable by a human without knowing agent internals.
 6. Preserve existing user files. Append, repair, or create missing files; do not silently rewrite history.
 
-## Common Commands
+## Example Triggers
 
-Examples of user requests this skill should handle:
+Phrases that should invoke this skill (Chinese or English):
 
-- "用 p-invest 初始化我的投资系统"
-- "更新我的投资面板"
-- "研究一下这家公司"
-- "把这家公司加入观察清单"
-- "我今天买了/卖了 X，帮我记录"
-- "检查一下持仓 thesis 有没有变化"
-- "做一次月度复盘"
-- "把这条投资教训固化到规则里"
+- "用 p-invest 初始化我的投资系统" / "set up my investment research folder"
+- "更新我的投资面板" / "update my dashboard"
+- "研究一下这家公司" / "research this company for me"
+- "把这家公司加入观察清单" / "add this to my watchlist"
+- "我今天买了/卖了 X，帮我记录" / "I bought some X today, log it"
+- "检查一下持仓 thesis 有没有变化" / "check if my thesis still holds"
+- "做一次月度复盘" / "do a monthly review"
+- "把这条投资教训固化到规则里" / "turn this lesson into a rule"
