@@ -1,0 +1,4 @@
+interface:
+  display_name: "P News"
+  short_description: "个人 AI 新闻、builder 信号与趋势追踪简报"
+  default_prompt: "Use $p-news to produce a concise AI news and builder signal digest."
