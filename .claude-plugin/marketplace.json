@@ -1,0 +1,32 @@
+{
+  "name": "p-skills",
+  "owner": {
+    "name": "panjuntao003"
+  },
+  "metadata": {
+    "description": "Portable personal workflow skills for news intelligence and investment research.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "p-news",
+      "description": "Personal AI news intelligence digest with primary-source verification.",
+      "source": "./",
+      "strict": false,
+      "version": "0.1.0",
+      "category": "personal-intelligence",
+      "keywords": ["ai-news", "builder-signals", "digest", "markdown"],
+      "skills": ["./skills/p-news"]
+    },
+    {
+      "name": "p-invest",
+      "description": "Human-readable personal investment research workflow under Documents/Invest.",
+      "source": "./",
+      "strict": false,
+      "version": "0.1.0",
+      "category": "investment-research",
+      "keywords": ["investment", "research", "obsidian", "markdown", "workflow"],
+      "skills": ["./skills/p-invest"]
+    }
+  ]
+}

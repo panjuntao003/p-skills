@@ -9,3 +9,4 @@ venv/
 *.log
 outputs/
 tmp/
+dist/
