@@ -11,3 +11,4 @@ Good company, good price, good patience.
 3. Do not sell only because price fell.
 4. Every formal external fact needs source, confidence, and date.
 5. Every decision needs a failure condition.
+6. Trading restricted to A-shares (沪深两市). No US, HK, or other markets.

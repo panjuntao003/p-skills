@@ -46,6 +46,7 @@ The final chat response should summarize the result and name the updated file pa
 4. Keep current facts fresh; use WebSearch or WebFetch to verify market, price, legal, regulatory, company, and macro data when the answer depends on recency.
 5. Do not hide the system from the user. Files should be readable by a human without knowing agent internals.
 6. Preserve existing user files. Append, repair, or create missing files; do not silently rewrite history.
+7. Trading is restricted to A-shares (沪深两市, Shanghai/Shenzhen exchanges). All company research, watchlist entries, trade logs, and holdings must use A-share tickers only. Do not research or recommend US stocks, HK stocks, or any other non-A-share markets unless the user explicitly removes this restriction.
 
 ## Example Triggers
 
