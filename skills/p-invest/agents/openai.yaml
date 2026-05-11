@@ -1,0 +1,4 @@
+interface:
+  display_name: "P Invest"
+  short_description: "个人投资研究文件系统：面板、公司、决策、持仓、复盘"
+  default_prompt: "Use $p-invest to initialize or update my investment research folder."
